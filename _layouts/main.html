@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="{{ site.author_name }}" />
+	<base href="{{ site.baseurl }}" >
+	<title>
+		{% if page.title %}{{ page.title }} -{% endif %}
+		{{ site.title }}
+	</title>
+</head>
+<body>
+
+{% include header.html %}
+
+<section class="content">{{ content }}</section>
+
+{% include footer.html %}
+
+</body>
+</html>

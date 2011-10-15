@@ -1,1 +1,10 @@
-<html><body>test.</body></html>
+---
+layout: main
+title: Home
+---
+
+{% for post in site.posts %}
+	{% assign content_ = post.content %}
+	{% include post.html %}
+{% endfor %}
+
