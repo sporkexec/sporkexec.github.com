@@ -7,7 +7,7 @@ pygments: true
 
 # Metadata used by jekyll (baseurl appears to do nothing but it is documented.)
 exclude: CNAME
-permalink: :year/:month/:title.html
+permalink: ":year/:month/:title.html"
 baseurl: //sporkexec.com/
 #baseurl: file:///home/jake/dev/sporkexec.github.com/_site/
 
