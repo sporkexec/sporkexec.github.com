@@ -1,6 +1,7 @@
 <article>
 	<header>
+		<time>{{ post.date | date: "%B %d, %Y" }}</time>
 		<a href="{{ post.url }}">{{ post.title }}</a>
 	</header>
-	{{ content_ }}
+	<div class="content">{{ content_ }}</div>
 </article>

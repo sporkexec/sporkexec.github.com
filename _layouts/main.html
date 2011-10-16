@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="{{ site.author_name }}" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="author" content="{{ site.author_name }}">
 	<base href="{{ site.baseurl }}" >
+	<link rel="stylesheet" type="text/css" media="all" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" media="all" href="style/text.css">
+	<link rel="stylesheet" type="text/css" media="all" href="style/960.css">
+	<link rel="stylesheet" type="text/css" media="all" href="style/desktop.css">
 	<title>
 		{% if page.title %}{{ page.title }} -{% endif %}
 		{{ site.title }}
@@ -13,7 +17,7 @@
 
 {% include header.html %}
 
-<section class="content">{{ content }}</section>
+<section class="container_16 content">{{ content }}</section>
 
 {% include footer.html %}
 

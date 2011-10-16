@@ -1,0 +1,5 @@
+body>header{background-color:#000;border-bottom:3px solid #08C;margin-bottom:1em;}body>header a{color:#fff;text-decoration:none;}
+body>header .links{text-align:right;}
+section.content .article_list header,section.content article header{font-weight:bold;font-size:1.3em;}section.content .article_list header time,section.content article header time{color:#666;}
+section.content .article_list header a,section.content article header a{font-size:1.2em;display:block;color:#000;text-decoration:none;}
+section.content article{margin-bottom:2em;line-height:1.5em;}section.content article .content{margin:1em 0px;}section.content article .content p{margin-bottom:1em;}

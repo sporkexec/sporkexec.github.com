@@ -1,0 +1,17 @@
+---
+layout: main
+---
+
+<div class="article_list">
+{% assign lastdate = 'None' %}
+{% for post in site.posts %}
+	<header>
+		{% if post.date != lastdate %}
+			{% assign lastdate = post.date %}
+			<time>{{ post.date | date: "%B %d, %Y" }}</time>
+		{% endif %}
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</header>
+{% endfor %}
+</div>
+
