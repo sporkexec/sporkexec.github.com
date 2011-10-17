@@ -15,9 +15,10 @@
 </head>
 <body>
 
-{% include header.html %}
-
-<section class="container_16 content">{{ content }}</section>
+<div id="wrap">
+	{% include header.html %}
+	<section id="content" class="container_16">{{ content }}</section>
+</div>
 
 {% include footer.html %}
 

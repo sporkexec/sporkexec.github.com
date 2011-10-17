@@ -1,22 +1,74 @@
-body > header {
+@footer_height: 4em;
+
+#wrap {
+	min-height: 100%; // Sticky footer
+}
+
+#header {
 	background-color: #000;
 	border-bottom: 3px solid #08C;
 	margin-bottom: 1em;
 	a {
 		color: #fff;
 		text-decoration: none;
+		&:hover {
+			color: #08c;
+		}
+	}
+	.home {
+		position: relative;
+		img {
+			position: absolute;
+			left: -35px;
+		}
+		&:hover img {
+			background-color: #222;
+		}
 	}
 	.links {
 		text-align: right;
 	}
 }
 
-section.content {
+#footer {
+	background-color: #eee;
+	color: #888;
+	text-shadow: 1px 1px 2px #ddd;
+
+	@border: 0.1em;
+	border-top: @border solid #ddd;
+	line-height: @footer_height - @border;
+
+	// Sticky footer {
+	position: relative;
+	margin-top: -1 * @footer_height;
+	height: @footer_height - @border;
+	clear: both;
+	// }
+
+	a {
+		color: #686868;
+		text-decoration: none;
+		&:hover {
+			color: #444;
+			text-decoration: underline;
+		}
+	}
+}
+
+#content {
+	// Sticky footer {
+	overflow:auto;
+	padding-bottom: @footer_height;
+	// }
+
 	.article_list header, article header {
 		font-weight: bold;
 		font-size: 1.3em;
 		time {
+			display: block;
 			color: #666;
+			margin-bottom: 0.2em;
 		}
 		a {
 			font-size: 1.2em;
