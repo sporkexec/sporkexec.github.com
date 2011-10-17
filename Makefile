@@ -1,5 +1,5 @@
 DEVBUILD="file:///home/jake/dev/sporkexec.github.com/_site"
-LIVEBUILD="//sporkexec.com/"
+LIVEBUILD="http://sporkexec.com/"
 
 all: site
 site: style jekyll

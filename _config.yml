@@ -8,7 +8,7 @@ pygments: true
 # Metadata used by jekyll (baseurl appears to do nothing but it is documented.)
 exclude: CNAME, Makefile
 permalink: ":year/:month/:title.exe"
-baseurl: //sporkexec.com/
+baseurl: "http://sporkexec.com/"
 
 # Used by the site.
 title: sporkexec.com
