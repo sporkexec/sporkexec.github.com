@@ -9,7 +9,6 @@ pygments: true
 exclude: CNAME, Makefile
 permalink: ":year/:month/:title.exe"
 baseurl: //sporkexec.com/
-#baseurl: file:///home/jake/dev/sporkexec.github.com/_site/
 
 # Used by the site.
 title: sporkexec.com
