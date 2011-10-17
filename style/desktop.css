@@ -1,5 +1,5 @@
 #wrap{min-height:100%;}
-#header{background-color:#000;border-bottom:3px solid #08C;margin-bottom:1em;}#header a{color:#fff;text-decoration:none;}#header a:hover{color:#08c;}
+#header{background-color:#000;border-bottom:3px solid #08C;margin-bottom:1em;height:31px;line-height:31px;font-size:0.8em;}#header a{color:#fff;text-decoration:none;}#header a:hover{color:#08c;}
 #header .home{position:relative;}#header .home img{position:absolute;left:-35px;}
 #header .home:hover img{background-color:#222;}
 #header .links{text-align:right;}
