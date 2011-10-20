@@ -151,7 +151,6 @@ li {
   disappearing if hasLayout is triggered.
 */
   display: list-item;
-  list-style: none;
 }
 
 table {
