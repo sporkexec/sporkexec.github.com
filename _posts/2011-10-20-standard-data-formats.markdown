@@ -3,7 +3,7 @@ layout: post
 title: '"Standard" Data Formats'
 ---
 
-On the last version of this site existed from around late 2008 to early 2010. This was the age when I still used PHP for anything more than masochism or money. I've been meaning to put together a site ever since, but only just now cared enough to actually do it. Tonight I grabbed the database dump from the old server and decided to try and import my old content, which was neither very large nor very good, but parts of it were neat. This is where the pain begins.
+On the last version of this site existed from around late 2008 to late 2010. This was the age when I still used PHP for anything more than masochism or money. I've been meaning to put together a site ever since, but only just now cared enough to actually do it. Tonight I grabbed the database dump from the old server and decided to try and import my old content, which was neither very large nor very good, but parts of it were neat. This is where the pain begins.
 
 There're two lessons I've learned from this the hard way:
 - Don't do funny shit with your data if you can't help it.
