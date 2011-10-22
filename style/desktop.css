@@ -7,3 +7,5 @@
 #content{overflow:auto;padding-bottom:4em;}#content .article_list header,#content article header{font-weight:bold;font-size:1.3em;}#content .article_list header time,#content article header time{display:block;color:#666;margin-bottom:0.2em;}
 #content .article_list header a,#content article header a{font-size:1.2em;display:block;color:#000;text-decoration:none;}
 #content article{margin-bottom:2em;line-height:1.5em;}#content article .content{margin:1em 0px;}#content article .content p,#content article .content ul{margin-bottom:1em;}
+body{font-family:'Open Sans','Helvetica',sans-serif;}
+pre,code{font-family:'Inconsolata',Consolas,monospace;}
