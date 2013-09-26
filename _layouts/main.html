@@ -2,16 +2,21 @@
 <html lang="en-us">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="author" content="{{ site.author_name }}">
+	<!--<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />-->
+	<meta name="author" content="{{ site.author_fname }} {{ site.author_lname }}">
 	<base href="{{ site.baseurl }}" >
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Inconsolata' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 959px)" href="style/mobile.css">
-	<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 960px)" href="style/desktop.css">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+	<!--<link rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 959px)" href="resources/mobile.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-device-width: 960px)" href="resources/desktop.css">-->
+	<link rel="stylesheet" type="text/css" href="resources/desktop.css">
 	<title>
 		{% if page.title %}{{ page.title }} -{% endif %}
 		{{ site.title }}
 	</title>
+	<script src="resources/swipe.js" type="text/javascript"></script>
+	<script src="resources/common.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-27459654-1']);
@@ -23,14 +28,30 @@
 		})();
 	</script>
 </head>
-<body>
-
-<div id="wrap">
-	{% include header.html %}
-	<section id="content" class="container_16">{{ content }}</section>
+<body class="{{ page.section }}">
+<div id="header_space"></div>
+<div class="container_16">
+	<nav class="alpha grid_4 sidebar">
+		<img id="logo" class="hires" src="resources/logo.png">
+		<ul class="section_list">
+			<li class="section about">
+				<a href="about">About</a>
+			</li>
+			<li class="section blog">
+				<a href="blog">Blog</a>
+			</li>
+			<li class="section projects">
+				<a href="projects">Projects</a>
+				<ul class="project_list">
+					<li class="project urmpc"><a href="projects/urmpc">urmpc</a></li>
+					<li class="project swag"><a href="projects/SWaG">Star Wars Galaga</a></li>
+					<!--<li class="project hccheckout"><a href="projects/hc-checkout">Checkout (HowCool.com)</a></li>
+					<li class="project sscrotwm"><a href="projects/sscrotwm">sscrotwm</a></li>-->
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<section id="content" class="omega push_4 grid_12">{{ content }}</section>
 </div>
-
-{% include footer.html %}
-
 </body>
 </html>

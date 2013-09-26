@@ -3,7 +3,7 @@ layout: post
 title: A Preview of MusicMonitor
 ---
 
-Well, for the past several weeks I've been writing a service to monitor a collection of music and maintain its metadata. I've finally reached a point where it's not what I'd call "okay." It has a ways to go before it's "good," but the most important bits are in place. Consider this approximately of early beta quality.
+For the past several weeks I've been writing a service to monitor a collection of music and maintain its metadata. I've finally reached a point where it's not what I'd call "okay." It has a ways to go before it's "good," but the most important bits are in place. Consider this approximately of early beta quality.
 
 Let's run through some of the features. We've got:
 - Support for MySQL, PostgreSQL, and SQLite storage. (Maybe more to come.)

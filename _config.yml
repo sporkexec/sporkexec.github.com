@@ -7,11 +7,12 @@ pygments: true
 
 # Metadata used by jekyll (baseurl appears to do nothing but it is documented.)
 exclude: CNAME, Makefile
-permalink: ":year/:month/:title.exe"
+permalink: ":year/:month/:title"
 baseurl: "http://sporkexec.com/"
 
 # Used by the site.
 title: sporkexec.com
-author_name: Jacob Courtneay
+author_fname: Jacob
+author_lname: Courtneay
 author_contact: jacob@sporkexec.com
 repo_url: https://github.com/sporkexec/sporkexec.github.com

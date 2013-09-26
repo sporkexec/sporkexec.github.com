@@ -1,73 +1,50 @@
 @import "reset";
-@import "text";
-@import "960";
-
-@footer_height: 4em;
-
-#wrap {
-	min-height: 100%; // Sticky footer
-}
+@import "common";
 
 #header {
 	background-color: #000;
 	border-bottom: 3px solid #08c;
 	margin-bottom: 1em;
 	line-height: 2.5em;
-	font-size: 0.8em;
+	padding: 0px 0.5em;
 	a {
 		color: #fff;
 		text-decoration: none;
-		&:hover {
-			color: #08c;
-		}
+	}
+	h1 {
+		display: inline;
 	}
 	.links {
-		text-align: right;
+		float: right;
 	}
 }
 
 #footer {
+	// No sticky footer, I doubt there'll be any pages which don't hit bottom.
 	background-color: #eee;
 	color: #888;
-	text-shadow: 1px 1px 2px #ddd;
-
-	@border: 0.1em;
-	border-top: @border solid #ddd;
-	line-height: @footer_height - @border;
-
-	// Sticky footer {
-	position: relative;
-	margin-top: -1 * @footer_height;
-	height: @footer_height - @border;
-	clear: both;
-	// }
-
+	border-top: 1px solid #ddd;
+	line-height: 1.5em;
+	font-size: 0.85em;
+	text-align: center;
 	a {
 		color: #666;
 		text-decoration: none;
-		&:hover {
-			color: #08c;
-			text-decoration: underline;
-		}
+		display: block;
 	}
 }
 
 #content {
-	// Sticky footer {
-	overflow:auto;
-	padding-bottom: @footer_height;
-	// }
-
 	.article_list header, article header {
+		text-align: center;
 		font-weight: bold;
-		font-size: 1.3em;
+		font-size: 1.2em;
 		time {
 			display: block;
 			color: #666;
 			margin-bottom: 0.2em;
 		}
 		a {
-			font-size: 1.2em;
 			display: block;
 			color: #000;
 			text-decoration: none;
@@ -75,6 +52,11 @@
 	}
 	.article_list {
 		margin-bottom: 0.5em;
+		padding: 0px 0.5em;
+		header {
+			margin-bottom: 0.5em;
+			text-align: left;
+		}
 		header time {
 			margin: 1em 0px 0px;
 		}
@@ -83,22 +65,33 @@
 		}
 	}
 	article {
-		margin-bottom: 2em;
+		border-top: 1px solid #e0e0e0;
+		padding: 1em 0.5em;
 		line-height: 1.5em;
+		&:first-child {
+			border-top: none;
+			padding-top: 0px;
+		}
 		.content {
-			margin: 1em 0px;
+			padding: 1em 0px;
 			p, ul, pre {
 				margin-bottom: 1em;
+			}
+			p {
+				text-indent: 1.5em;
 			}
 			a {
 				color: #08c;
 				text-decoration: none;
-				&:hover {
-					color: #08c;
-					text-decoration: underline;
-				}
 				&:visited {
 					color: #90c;
+				}
+			}
+			ul {
+				list-style: disc;
+				margin-left: 1em;
+				li {
+					margin-left: 1em;
 				}
 			}
 		}
@@ -107,9 +100,22 @@
 
 body {
 	font-family: 'Open Sans', 'Helvetica', sans-serif;
+	width: 100%;
 }
 
 pre,
 code {
 	font-family: 'Inconsolata', Consolas, monospace;
+}
+
+@media (orientation: portrait) {
+	#content {
+		font-size: 0.8em;
+	}
+}
+
+@media (orientation: landscape) {
+	#content, #footer {
+		font-size: 0.5em;
+	}
 }

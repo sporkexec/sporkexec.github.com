@@ -1,0 +1,15 @@
+---
+layout: main
+title: Blog
+---
+
+{% for post in site.posts limit:5 %}
+	{% assign content_ = post.content %}
+	{% include post.html %}
+{% endfor %}
+
+<article>
+	<header>
+		<a href="blog/all">View all posts</a>
+	</header>
+</article>

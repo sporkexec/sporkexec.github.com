@@ -1,0 +1,61 @@
+---
+layout: main
+section: projects urmpc
+title: urmpc
+---
+
+<div class="grid_10">
+	<header>
+		<div>
+			<span class="title">urmpc</span>
+			<span class="description">A console Python MPD client using urwid</span>
+		</div>
+		<a class="liveview" target="_blank" href="https://github.com/sporkexec/urmpc">View on GitHub</a>
+	</header>
+
+	<div class="intro_media">
+		<div id="slider" class="swipe">
+			<div class="swipe-wrap">
+				<div><img width=580 height=435 src="resources/projects/urmpc/slider1_playlist.png" /></div>
+				<div><img width=580 height=435 src="resources/projects/urmpc/slider2_help.png" /></div>
+				<div><img width=580 height=435 src="resources/projects/urmpc/slider3_library.png" /></div>
+			</div>
+			<div class="prev">
+				<img class="normal hires" src="resources/arrows/prev.png" />
+				<img class="hover hires" src="resources/arrows/prev_hover.png" />
+			</div>
+			<div class="next">
+				<img class="normal hires" src="resources/arrows/next.png" />
+				<img class="hover hires" src="resources/arrows/next_hover.png" />
+			</div>
+		</div>
+	</div>
+
+	<p class="intro_text">
+		urmpc is a terminal-based client to the Music Player Daemon, emphasizing keyboard controls and configurability. MPD clients do not play music on their own, but instead provide the user with a way to control the playback of the server. urmpc is targeted towards users who call the terminal and vim home, the people who are comfortable without a GUI and tend to shun the mouse as much as possible in favor of keyboard navigation. It by default also heavily targets vim users, although these default keybindings are largely cosmetic and may be easily modified to whatever the user pleases. urmpc, as a terminal application, does not require any GUI to run, although it can easily accommodate a graphical environment by running in any terminal emulator.
+	</p>
+
+	<div class="feature_section clearfix">
+		<div class="feature grid_4 alpha">
+			<div class="title">Configurable</div>
+			<div class="subtitle">For the special snowflake in all of us</div>
+			<img src="resources/projects/urmpc/thumb1_config.png" />
+		</div>
+		<div class="detail grid_6 omega">
+			<p>All colors, keybindings, separators, sorting, etc. are easily adjustable from an INI file with embedded JSON where nonscalar data types are required. Each part of the interface should be configurable. Although urwid attempts to handle much of this, different colors may be required when the color depth of the available terminal means that similar colors are blended together, leaving the UI unreadable, or when a unicode character used for an appealing border or separator is unavailable in the terminal or font used on the client machine.</p>
+			<p>Alternate keybindings are provided for users uncomfortable with vi-style navigation, although an intuitive experience for vi users is the main goal of the default settings. Power users have an insatiable drive to fiddle and hack on their applications and work environments, to make their machines appear and operate in a way which is uniquely theirs. urmpc strives to be yet another means to that end.</p>
+		</div>
+	</div>
+
+	<div class="feature_section clearfix">
+		<div class="feature grid_4 alpha">
+			<div class="title">Lightweight</div>
+			<div class="subtitle">"Do one thing and do it well"</div>
+			<img src="resources/projects/urmpc/thumb2_lightweight.png" />
+		</div>
+		<div class="detail grid_6 omega">
+			<p>urmpc attempts to accomplish the single task of controlling MPD from the console in a network-transparent manner. As such, as much functionality as possible is delegated to external dependencies, since the most useful and reliable tools are often those which are smallest and most focused. urmpc's feature set is restricted to the functionality which can be implemented with only the MPD protocol.</p>
+			<p>Similar projcts such as ncmpcpp have included features like filesystem browsing and tag editing. Both of these features are unsuitable for a pure MPD client, as the MPD protocol does not provide a method for direct filesystem access or metadata modification. Unfortunately, that approach breaks the network transparency of MPD, requiring the client to reside on the same machine as the system to be fully functional. Visualizations are a similarly inappropriate feature; since music may be streamed over a FIFO but not over the MPD protocol itself, visualizations over the network are not possible without cumbersome workarounds.</p>
+		</div>
+	</div>
+</div>

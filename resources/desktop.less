@@ -1,0 +1,299 @@
+@import "reset";
+@import "common";
+@import "text";
+@import "960";
+
+body {
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; ///FIXME
+}
+
+#header_space {
+	border-top: 5px solid @accent_blue;
+	padding-top: 45px;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #FFFFFF 60%, rgba(255, 255, 255, 0) 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 60%, rgba(255, 255, 255, 0) 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 60%, rgba(255, 255, 255, 0) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(0.60, #FFFFFF), color-stop(1, rgba(255, 255, 255, 0)));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 60%, rgba(255, 255, 255, 0) 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.sidebar {
+	position: fixed;
+	margin-top: 50px;
+	z-index: 200;
+	#logo {
+		position: relative;
+		top: -13px;
+		width: 220px;
+		height: 100px;
+		margin-bottom: 20px;
+	}
+	.section_list .section {
+		margin-left: 0;
+		list-style-type: none;
+		margin-bottom: 0.9em;
+		> a {
+			color: #fff;
+			text-shadow: 1px 1px 1px #aaa;
+			text-decoration: none;
+			font-size: 1.2em;
+			line-height: 2.5em;
+			display: inline-block;
+			width: (220px - 15px - 15px);
+			padding-left: 15px;
+			border-right: 15px solid rgba(255, 255, 255, 0);
+		}
+		&.about    > a { background-color: @accent_blue;   &:hover { border-right: 15px solid lighten(@accent_blue, 20%); } }
+		&.blog     > a { background-color: @accent_yellow; &:hover { border-right: 15px solid lighten(@accent_yellow, 20%); } }
+		&.projects > a { background-color: @accent_red;    &:hover { border-right: 15px solid lighten(@accent_red, 20%); } }
+		&.projects .project {
+			margin-left: 0;
+			list-style-type: none;
+			> a {
+				color: #fff;
+				text-shadow: 1px 1px 1px #888;
+				text-decoration: none;
+				line-height: 2em;
+				width: (220px - 15px);
+				display: inline-block;
+				padding-left: 15px;
+				&:hover {
+					background-color: lighten(@accent_red, 20%);
+				}
+			}
+		}
+		&.projects .project_list {
+			background-color: lighten(@accent_red, 15%);
+			display: none;
+		}
+	}
+}
+
+body.projects {
+	.project_list { display: block !important; }
+	&.urmpc .project.urmpc { background-color: lighten(@accent_red, 20%); }
+	&.swag .project.swag { background-color: lighten(@accent_red, 20%); }
+	&.hccheckout .project.hccheckout { background-color: lighten(@accent_red, 20%); }
+	&.sscrotwm .project.sscrotwm { background-color: lighten(@accent_red, 20%); }
+
+	#content {
+		header {
+			padding-bottom: 1em;
+			.title {
+				color: @accent_blue;
+				font-size: 1.5em;
+				font-weight: bold;
+				&:after {
+					font-weight: 300;
+					content: ': ';
+				}
+			}
+			.description {
+				font-size: 1.5em;
+				font-weight: 300;
+			}
+			a.liveview {
+				color: #888;
+				font-size: 0.9em;
+				margin-top: -2px;
+			}
+		}
+		.intro_media {
+			padding-bottom: 1em;
+		}
+		.intro_text {
+			padding-bottom: 2em;
+		}
+		.feature_section {
+			&:last-of-type {
+				.feature, .detail {
+					padding-bottom: 0;
+				}
+			}
+			.feature {
+				padding-bottom: 4em;
+				.title {
+					font-size: 1.25em;
+					font-weight: bold;
+					color: @accent_blue;
+				}
+				.subtitle {
+					font-style: italic;
+					font-weight: 300;
+					color: #666;
+				}
+				img {
+					width: 220px;
+					height: 220px;
+					margin-top: 12px;
+				}
+			}
+			.detail {
+				padding-bottom: 4em;
+				min-height: 300px;
+				margin-left: 10px;
+				border-left: 1px solid #eee;
+				padding-left: 20px;
+				width: 319px; // Breaking the grid! D:
+				p {
+					padding-bottom: 1em;
+					&:last-of-type {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.projects_index {
+		.project {
+			text-align: center;
+			text-decoration: none;
+			padding-bottom: 1.5em;
+			margin-left: -2px;
+			border: 1px solid rgba(0,0,0,0);
+			&:hover {
+				border: 1px solid #d0d0d0;
+				box-shadow: 1px 2px 3px #eee;
+			}
+			img {
+				width: 340px;
+				height: 255px;
+			}
+			.title {
+				color: @accent_blue;
+				font-weight: bold;
+				font-size: 1.3em;
+				line-height: 1.5em;
+			}
+			.subtitle {
+				font-size: 1.2em;
+				color: #000;
+			}
+		}
+	}
+}
+
+body.about #content {
+	img.selfie {
+		margin-top: 5px;
+		width: 220px;
+		height: 220px;
+	}
+	.intro p {
+		line-height: 1.5em;
+	}
+	.intro header {
+		font-size: 1.5em;
+		margin: 0 0 0.5em;
+		color: @accent_blue;
+	}
+	.skills {
+		margin-top: 2em;
+		header {
+			font-size: 1.25em;
+			padding-bottom: 0.2em;
+			color: @accent_blue;
+		}
+	}
+	.references {
+		margin-top: 2em;
+		@border: 5px;
+		@padding: 1em;
+		#ref1 {
+			background-color: lighten(@accent_blue, 40%);
+			border-left: @border solid @accent_blue;
+			border-right: @border solid @accent_blue;
+			padding: @padding;
+		}
+		#ref2 {
+			background-color: lighten(@accent_yellow, 40%);
+			border-left: @border solid @accent_yellow;
+			border-right: @border solid @accent_yellow;
+			padding: @padding;
+		}
+		#ref3 {
+			background-color: lighten(@accent_red, 40%);
+			border-left: @border solid @accent_red;
+			border-right: @border solid @accent_red;
+			padding: @padding;
+		}
+		header {
+			color: #444;
+			padding-bottom: 0.5em;
+			.name {
+				font-weight: bold;
+			}
+			.context {
+				&:before { content: '\2014'; } // emdash
+				.title:after { content: ', '; }
+				.location { color: #6262dd; }
+			}
+		}
+		
+	}
+	.cta {
+		margin-top: 2em;
+	}
+}
+
+#content {
+	margin-top: 50px - 5px;
+	font-size: 0.9em;
+	padding-bottom: 3em;
+	.article_list header, article header {
+		font-size: 1.3em;
+		time {
+			font-weight: 300;
+			display: block;
+			color: #666;
+		}
+		a {
+			font-weight: bold;
+			font-size: 1.2em;
+			display: block;
+			color: @accent_blue;
+			text-decoration: none;
+			line-height: 1.2em;
+		}
+	}
+	.article_list {
+		margin-bottom: 0.5em;
+		header time {
+			margin: 1em 0px 0px;
+		}
+		header:first-child time {
+			margin: 0px;
+		}
+	}
+	article {
+		margin-bottom: 2em;
+		line-height: 1.5em;
+		.content {
+			margin: 1em 0px;
+			p, ul, pre {
+				margin-bottom: 1em;
+			}
+			a {
+				color: #08c;
+				text-decoration: none;
+				&:hover {
+					color: #08c;
+					text-decoration: underline;
+				}
+				&:visited {
+					color: #90c;
+				}
+			}
+		}
+	}
+}
+
+pre,
+code {
+	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
+}

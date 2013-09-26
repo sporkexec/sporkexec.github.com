@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Just Drive Your Fucking Prius Already.
+title: Just Drive Your Prius Already.
 ---
 
 As our technological capabiities continue to expand, we rely on computers for increasingly important functions. While they were once used primarily for email and leisure, computers are now watching over many financial and even physical aspects of our lives. While this fact alone has troubling implications regarding our independence and self-sufficiency, I am currently speaking in concern of the general public's expectations of these systems. We are holding unreasonably high standards for computers, with the Toyota Prius and PG&E SmartMeter cases being prime examples.

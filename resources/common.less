@@ -1,0 +1,63 @@
+@accent_blue:   #1ab6ea;
+@accent_yellow: #ffd514;
+@accent_red:    #f91740;
+
+code, pre, tt {
+	-o-tab-size: 4;
+	-ms-tab-size: 4;
+	-webkit-tab-size: 4;
+	tab-size: 4;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Source+Code+Pro:200,300,400,500,600,700,900);
+@import "pygments.less";
+
+// Swipe {
+	.swipe {
+		overflow: hidden;
+		position: relative;
+		// The docs say to add this, but I'd rather the content be visible
+		// albeit ugly if JS is off than have a slightly prettier pageload.
+		// So I'll do this in JS, it'll still be visible until that kicks
+		// in but it'll only be a flash and content will still be visible
+		// sans-JS.
+		//visibility: hidden;
+		.prev, .next {
+			width: 30px;
+			height: 30px;
+			margin-top: (-30px / 2) - 1px;
+			position: absolute;
+			top: 50%;
+			padding: 20px 10px;
+			z-index: 100;
+			cursor: pointer;
+			img {
+				position: absolute;
+				width: 30px;
+				height: 30px;
+			}
+			.hover { display: none; }
+			&:hover .normal { display: none; }
+			&:hover .hover  { display: block; }
+		}
+		.prev { left: 0px; }
+		.next { right: 0px; }
+	}
+	.swipe-wrap {
+		overflow: hidden;
+		position: relative;
+	}
+	.swipe-wrap > div {
+		float:left;
+		width:100%;
+		position: relative;
+	}
+// } Swipe
+
+@media (scan: 3d-glasses) {
+	* {
+		text-shadow: 2px 2px 1px #f00, -2px -1px 1px #00F !important;
+		color: rgba(1,1,1,0) !important;
+		font-weight: 500 !important;
+	}
+}
