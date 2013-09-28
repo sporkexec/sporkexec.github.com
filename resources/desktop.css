@@ -78,7 +78,7 @@ code,pre,tt{-o-tab-size:4;-ms-tab-size:4;-webkit-tab-size:4;tab-size:4}
 .highlight .vi{color:#33b}
 .highlight .il{color:#17b817;font-weight:bold}
 .highlight .p{color:#2bb6aa}
-.swipe{overflow:hidden;position:relative}.swipe .prev,.swipe .next{width:30px;height:30px;margin-top:-16px;position:absolute;top:50%;padding:20px 10px;z-index:100;cursor:pointer}.swipe .prev img,.swipe .next img{position:absolute;width:30px;height:30px}
+.swipe{overflow:hidden;position:relative}.swipe .prev,.swipe .next{width:30px;height:30px;margin-top:-16px;position:absolute;top:50%;padding:20px 10px;z-index:10;cursor:pointer}.swipe .prev img,.swipe .next img{position:absolute;width:30px;height:30px}
 .swipe .prev .hover,.swipe .next .hover{display:none}
 .swipe .prev:hover .normal,.swipe .next:hover .normal{display:none}
 .swipe .prev:hover .hover,.swipe .next:hover .hover{display:block}
