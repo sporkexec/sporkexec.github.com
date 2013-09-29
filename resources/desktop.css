@@ -14,6 +14,8 @@ sub,sup{line-height:0;position:relative;vertical-align:baseline}
 sub{bottom:-0.25em}
 sup{top:-0.5em}
 svg{overflow:hidden}
+body{font-family:'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif}
+pre,code{font-family:'Source Code Pro','DejaVu Sans Mono',Consolas,monospace}
 code,pre,tt{-o-tab-size:4;-ms-tab-size:4;-webkit-tab-size:4;tab-size:4}
 .highlight .hll{background-color:#ffc}
 .highlight{background:#fff}
@@ -182,7 +184,6 @@ body{min-width:960px}
 .clearfix:before,.clearfix:after,.container_16:before,.container_16:after{content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0}
 .clearfix:after,.container_16:after{clear:both}
 .clearfix,.container_16{zoom:1}
-body{font-family:'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif}
 #header_space{border-top:5px solid #1ab6ea;padding-top:45px;position:fixed;width:100%;z-index:100;background-image:-ms-linear-gradient(top, #fff 0, #fff 60%, rgba(255,255,255,0) 100%);background-image:-moz-linear-gradient(top, #fff 0, #fff 60%, rgba(255,255,255,0) 100%);background-image:-o-linear-gradient(top, #fff 0, #fff 60%, rgba(255,255,255,0) 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(.6, #fff), color-stop(1, rgba(255,255,255,0)));background-image:-webkit-linear-gradient(top, #fff 0, #fff 60%, rgba(255,255,255,0) 100%);background-image:linear-gradient(to bottom, #fff 0, #fff 60%, rgba(255,255,255,0) 100%)}
 .sidebar{position:fixed;margin-top:50px;z-index:200}.sidebar #logo{position:relative;top:-13px;width:220px;height:100px;margin-bottom:20px}
 .sidebar .section_list .section{margin-left:0;list-style-type:none;margin-bottom:.9em}.sidebar .section_list .section>a{color:#fff;text-shadow:1px 1px 1px #aaa;text-decoration:none;font-size:1.2em;line-height:2.5em;display:inline-block;width:190px;padding-left:15px;border-right:15px solid rgba(255,255,255,0)}
@@ -199,7 +200,7 @@ body.projects.sscrotwm .project.sscrotwm{background-color:#fc7a92}
 body.projects #content header{padding-bottom:1em}body.projects #content header .title{color:#1ab6ea;font-size:1.5em;font-weight:bold}body.projects #content header .title:after{font-weight:300;content:': '}
 body.projects #content header .description{font-size:1.5em;font-weight:300}
 body.projects #content header a.liveview{color:#888;font-size:.9em;margin-top:-2px}
-body.projects #content .intro_media{padding-bottom:1em}
+body.projects #content .intro_media{padding-bottom:1em}body.projects #content .intro_media .media_slide img{width:100%}
 body.projects #content .intro_text{padding-bottom:2em}
 body.projects #content .feature_section:last-of-type .feature,body.projects #content .feature_section:last-of-type .detail{padding-bottom:0}
 body.projects #content .feature_section .feature{padding-bottom:4em}body.projects #content .feature_section .feature .title{font-size:1.25em;font-weight:bold;color:#1ab6ea}
@@ -229,4 +230,3 @@ body.about #content .cta{margin-top:2em}
 #content article{margin-bottom:2em;line-height:1.5em}#content article .content{margin:1em 0}#content article .content p,#content article .content ul,#content article .content pre{margin-bottom:1em}
 #content article .content a{color:#08c;text-decoration:none}#content article .content a:hover{color:#08c;text-decoration:underline}
 #content article .content a:visited{color:#90c}
-pre,code{font-family:'Source Code Pro','DejaVu Sans Mono',Consolas,monospace}

@@ -1,62 +1,233 @@
 @import "reset";
 @import "common";
+@import "text";
 
-#header {
-	background-color: #000;
-	border-bottom: 3px solid #08c;
-	margin-bottom: 1em;
-	line-height: 2.5em;
-	padding: 0px 0.5em;
-	a {
-		color: #fff;
-		text-decoration: none;
+#header_space {
+	border-top: 5px solid @accent_blue;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.sidebar {
+	text-align: center;
+	border-bottom: 1px solid @accent_blue;
+	margin-bottom: 15px;
+	#logo {
+		width: 220px;
+		height: 100px;
+		margin-top: 10px;
 	}
-	h1 {
+	.section_list .section {
+		margin: 0 20px;
+		list-style-type: none;
 		display: inline;
-	}
-	.links {
-		float: right;
+		> a {
+			text-decoration: none;
+			font-size: 1.2em;
+			line-height: 2.5em;
+			font-weight: 600;
+		}
+		&.about    > a { color: @accent_blue; }
+		&.blog     > a { color: @accent_yellow; }
+		&.projects > a { color: @accent_red; }
+		&.projects .project_list { display: none; }
 	}
 }
 
-#footer {
-	// No sticky footer, I doubt there'll be any pages which don't hit bottom.
-	background-color: #eee;
-	color: #888;
-	border-top: 1px solid #ddd;
-	line-height: 1.5em;
-	font-size: 0.85em;
-	text-align: center;
-	a {
-		color: #666;
-		text-decoration: none;
+body.projects {
+	#content {
+		header {
+			padding-bottom: 1em;
+			.title {
+				color: @accent_blue;
+				font-size: 1.5em;
+				font-weight: bold;
+				display: block;
+			}
+			.description {
+				font-size: 1.5em;
+				font-weight: 300;
+			}
+			a.liveview {
+				color: #888;
+				font-size: 0.9em;
+				margin-top: -2px;
+			}
+		}
+		.intro_media {
+			padding-bottom: 1em;
+			.media_slide {
+				text-align: center;
+				img {
+					width: 100%;
+					max-width: 580px;
+				}
+			}
+		}
+		.intro_text {
+			padding-bottom: 2em;
+		}
+		.feature_section {
+			&:last-of-type {
+				.detail {
+					padding-bottom: 0;
+				}
+			}
+			.feature {
+				text-align: center;
+				padding-bottom: 1em;
+				.title {
+					font-size: 1.25em;
+					font-weight: bold;
+					color: @accent_blue;
+				}
+				.subtitle {
+					font-style: italic;
+					font-weight: 300;
+					color: #666;
+				}
+				img {
+					width: 220px;
+					height: 220px;
+					margin-top: 12px;
+				}
+			}
+			.detail {
+				padding-bottom: 2em;
+				p {
+					padding-bottom: 1em;
+				}
+			}
+		}
+	}
+
+	.projects_index {
+		.project {
+			text-align: center;
+			text-decoration: none;
+			display: block;
+			padding-bottom: 3em;
+			img {
+				width: 100%;
+				max-width: 580px;
+			}
+			.title {
+				color: @accent_blue;
+				font-weight: bold;
+				font-size: 1.3em;
+				line-height: 1.3em;
+			}
+			.subtitle {
+				font-size: 1.1em;
+				color: #000;
+			}
+		}
+	}
+}
+
+body.about #content {
+	padding-bottom: 1.5em;
+	img.selfie {
+		width: 220px;
+		height: 220px;
+		margin: 0 auto;
 		display: block;
+	}
+	.intro p {
+		line-height: 1.5em;
+	}
+	.intro header {
+		font-size: 1.5em;
+		margin: 1em 0 0.5em;
+		color: @accent_blue;
+		text-align: center;
+	}
+	.skills {
+		.dev, .admin {
+			width: 49%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		header {
+			font-size: 1.25em;
+			padding-bottom: 0.2em;
+			margin-top: 1em;
+			color: @accent_blue;
+			&.info {
+				///FIXME: This is a filthy, awful hack to prevent wrapping.
+				width: 200%;
+			}
+		}
+	}
+	.references {
+		// Hacky? Yes. Pretty? Yes.
+		width: 105%;
+		margin-left: -2.5%;
+
+		margin-top: 2em;
+		@border: 5px;
+		@padding: 1em;
+		#ref1 {
+			background-color: lighten(@accent_blue, 40%);
+			border-left: @border solid @accent_blue;
+			border-right: @border solid @accent_blue;
+			padding: @padding;
+		}
+		#ref2 {
+			background-color: lighten(@accent_yellow, 40%);
+			border-left: @border solid @accent_yellow;
+			border-right: @border solid @accent_yellow;
+			padding: @padding;
+		}
+		#ref3 {
+			background-color: lighten(@accent_red, 40%);
+			border-left: @border solid @accent_red;
+			border-right: @border solid @accent_red;
+			padding: @padding;
+		}
+		header {
+			color: #444;
+			padding-bottom: 0.5em;
+			.name {
+				display: block;
+				font-weight: bold;
+				margin-bottom: -2px;
+			}
+			.context {
+				font-size: 0.9em;
+				.title:after { content: ', '; }
+				.location { color: #6262dd; }
+			}
+		}
+		
+	}
+	.cta {
+		margin-top: 2em;
 	}
 }
 
 #content {
+	width: 95%;
+	margin: 0 auto 1.5em;
 	.article_list header, article header {
-		text-align: center;
-		font-weight: bold;
-		font-size: 1.2em;
+		font-size: 1.3em;
 		time {
+			font-weight: 300;
 			display: block;
 			color: #666;
-			margin-bottom: 0.2em;
 		}
 		a {
+			font-weight: bold;
+			font-size: 1.2em;
 			display: block;
-			color: #000;
+			color: @accent_blue;
 			text-decoration: none;
+			line-height: 1.2em;
 		}
 	}
 	.article_list {
-		margin-bottom: 0.5em;
-		padding: 0px 0.5em;
-		header {
-			margin-bottom: 0.5em;
-			text-align: left;
-		}
+		padding-bottom: 1.5em;
 		header time {
 			margin: 1em 0px 0px;
 		}
@@ -65,57 +236,24 @@
 		}
 	}
 	article {
-		border-top: 1px solid #e0e0e0;
-		padding: 1em 0.5em;
+		padding-bottom: 1.5em;
 		line-height: 1.5em;
-		&:first-child {
-			border-top: none;
-			padding-top: 0px;
-		}
 		.content {
-			padding: 1em 0px;
+			margin: 1em 0px;
 			p, ul, pre {
 				margin-bottom: 1em;
-			}
-			p {
-				text-indent: 1.5em;
 			}
 			a {
 				color: #08c;
 				text-decoration: none;
+				&:hover {
+					color: #08c;
+					text-decoration: underline;
+				}
 				&:visited {
 					color: #90c;
 				}
 			}
-			ul {
-				list-style: disc;
-				margin-left: 1em;
-				li {
-					margin-left: 1em;
-				}
-			}
 		}
-	}
-}
-
-body {
-	font-family: 'Open Sans', 'Helvetica', sans-serif;
-	width: 100%;
-}
-
-pre,
-code {
-	font-family: 'Inconsolata', Consolas, monospace;
-}
-
-@media (orientation: portrait) {
-	#content {
-		font-size: 0.8em;
-	}
-}
-
-@media (orientation: landscape) {
-	#content, #footer {
-		font-size: 0.5em;
 	}
 }

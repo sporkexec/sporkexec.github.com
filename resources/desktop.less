@@ -3,10 +3,6 @@
 @import "text";
 @import "960";
 
-body {
-	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; ///FIXME
-}
-
 #header_space {
 	border-top: 5px solid @accent_blue;
 	padding-top: 45px;
@@ -104,6 +100,9 @@ body.projects {
 		}
 		.intro_media {
 			padding-bottom: 1em;
+			.media_slide img {
+				width: 100%;
+			}
 		}
 		.intro_text {
 			padding-bottom: 2em;
@@ -291,9 +290,4 @@ body.about #content {
 			}
 		}
 	}
-}
-
-pre,
-code {
-	font-family: 'Source Code Pro', 'DejaVu Sans Mono', Consolas, monospace;
 }
