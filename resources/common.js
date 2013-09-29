@@ -1,3 +1,25 @@
+function fixSidebarPosition() { 
+	// position: fixed renders slightly differently between browsers.
+	// The spec states that left/top offsets are defined relative to the viewport,
+	// with no way to position relative to a parent element like position: absolute.
+	// However, on chrome the default position of fixed elements is whereever they
+	// would appear in the flow, so not specifying left works fine (although this
+	// undefined behavior and could break). Firefox positions it elsewhere, and so
+	// I need a way to get the sidebar relative to the center-aligned container...
+	// Hence this. There is talk of position: sticky around the web, but it doesn't
+	// seem to be a thing yet.
+	var container = document.getElementById('main_container');
+	var sidebar = document.querySelector('#main_container .sidebar');
+	if(container.offsetLeft != sidebar.offsetLeft) {
+		// If the location is already correct, we'll just leave it alone.
+		sidebar.style.left = container.offsetLeft + 'px';
+		if(!window.onresize) {
+			// We need to realign the sidebar with the re-centered content area on every resize.
+			window.onresize = fixSidebarPosition;
+		}
+	}
+}
+
 function loadHiResImages() {
 	var ratio = window.devicePixelRatio || 1;
 	if     (ratio <  1.5) return;
@@ -55,6 +77,7 @@ function swipeSlider() {
 }
 
 window.onload = function() {
+	fixSidebarPosition();
 	loadHiResImages();
 	renderGreeting();
 	swipeSlider();
