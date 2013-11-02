@@ -230,3 +230,5 @@ body.about #content .cta{margin-top:2em}
 #content article{margin-bottom:2em;line-height:1.5em}#content article .content{margin:1em 0}#content article .content p,#content article .content ul,#content article .content pre{margin-bottom:1em}
 #content article .content a{color:#08c;text-decoration:none}#content article .content a:hover{color:#08c;text-decoration:underline}
 #content article .content a:visited{color:#90c}
+.swipe{width:580px}
+@media (max-width:720px){.sidebar{position:absolute;margin-top:20px;margin-left:10px} #content{margin-top:10px} #header_space{display:none}}

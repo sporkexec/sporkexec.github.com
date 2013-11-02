@@ -291,3 +291,28 @@ body.about #content {
 		}
 	}
 }
+
+.swipe {
+	width: 580px;
+}
+
+@media (max-width: 720px) {
+	.sidebar {
+		position: absolute;
+		margin-top: 20px;
+		margin-left: 10px;
+	}
+	#content {
+		margin-top: 10px;
+	}
+	#header_space {
+		// Even with position:absolute (fixed breaks on zoom), mobile browsers will
+		// display a bar narrower than the viewport regardless of the width:100%.
+		// So I'm just hiding it until CSS has ways to cope with things.
+		// (All of this is just a filthy hack anyways because there's no way to make
+		// a fixed element unzoomable while allowing the rest of the content to zoom,
+		// so a layout with fixed elements causes the sidebar/topbar to bloat up and
+		// intrusively overlap the main content. =\
+		display: none;
+	}
+}

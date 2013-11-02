@@ -4,61 +4,60 @@ section: projects swag
 title: Star Wars Galaga
 ---
 
-<div class="grid_10">
-	<header>
-		<div>
-			<span class="title">Star Wars Galaga</span>
-			<span class="description">A twist on an arcade classic</span>
-		</div>
-		<a class="liveview" target="_blank" href="https://github.com/sporkexec/Cs335_final/tree/master/Final/Game">View on GitHub</a>
-	</header>
-
-	<div class="intro_media">
-		<div id="slider" class="swipe">
-			<div class="swipe-wrap">
-				<div class="media_slide"><img src="resources/projects/swag/slider1_overview.png" /></div>
-				<div class="media_slide"><img src="resources/projects/swag/slider2_homing.png" /></div>
-				<div class="media_slide"><img src="resources/projects/swag/slider3_deathstar.png" /></div>
-			</div>
-			<div class="prev">
-				<img class="normal hires" src="resources/arrows/prev.png" />
-				<img class="hover hires" src="resources/arrows/prev_hover.png" />
-			</div>
-			<div class="next">
-				<img class="normal hires" src="resources/arrows/next.png" />
-				<img class="hover hires" src="resources/arrows/next_hover.png" />
-			</div>
-		</div>
+<header>
+	<div>
+		<span class="title">Star Wars Galaga</span>
+		<span class="description">A twist on an arcade classic</span>
 	</div>
+	<a class="liveview" target="_blank" href="https://github.com/sporkexec/Cs335_final/tree/master/Final/Game">View on GitHub</a>
+</header>
 
-	<p class="intro_text">
-		Star Wars Galaga was created in my senior year at CSUB as a group project for the Software Engineering course. The coding phase of this project lasted just under one month and consisted of over 100 commits between three developers. My responsibilities for this project included collision detection, input handling, graphic rendering, and enemy AI. In addition to using Git/GitHub in a group setting and exploring new software libraries such as GLFW and GLib, we also gained experience with remote collaboration. Although our diverse locations included on-campus, in nearby cities, and even the other side of the country, by dividing tasks between us and heavily utilizing email and GitHub to stay connected, we ended up creating a great product.
-	</p>
-
-	<div class="feature_section clearfix">
-		<div class="feature grid_4 alpha">
-			<div class="title">GLFW &amp; GLib</div>
-			<div class="subtitle">The best things in life are free</div>
-			<img src="resources/projects/swag/thumb1_osi.png" />
+<div class="intro_media">
+	<div id="slider" class="swipe">
+		<div class="swipe-wrap">
+			<div class="media_slide"><img src="resources/projects/swag/slider1_overview.png" /></div>
+			<div class="media_slide"><img src="resources/projects/swag/slider2_homing.png" /></div>
+			<div class="media_slide"><img src="resources/projects/swag/slider3_deathstar.png" /></div>
 		</div>
-		<div class="detail grid_6 omega">
-			<p>Much of the heavy lifting in our game was offloaded to GLFW and GLib, a pair of excellent open-source libraries.</p>
-
-			<p>GLFW is used to manage the main event loop and handle input within the application. Using this library enabled an asyncronous callback-oriented approach to event handling, rather than writing an event loop from scratch where all input is handled every frame. This approach allows for cleaner code more typical of object-oriented event-driven programs, despite it being written in pure C.</p>
-
-			<p>Gnome's GLib project is used primarily for its robust and generic data type implementations. This was my first project using GLib, as I had previously coded basic data structures from scratch. I noticed the need for linked lists of several types of structs as I was coding: lasers, ships, turrets, and the like. However, I had been embedding next pointers within each type of struct, so I couldn't just use the same functions for adding, deleting, iterating, etc. on the lists. As I started considering coding a more generic linked list which could handle this, I realized that my <a href="http://en.wikipedia.org/wiki/Not_invented_here" target="_blank">NIH Syndrome</a> was showing and decided on GLib's implementation, since I'd heard good things about the library. Not only does this provide stable and flexible data types, but GLib also provides convenience functions such as <a href="https://developer.gnome.org/glib/2.34/glib-Doubly-Linked-Lists.html#g-list-foreach" target="_blank">g_list_foreach()</a> to easily operate on the entire list.</p>
+		<div class="prev">
+			<img class="normal hires" src="resources/arrows/prev.png" />
+			<img class="hover hires" src="resources/arrows/prev_hover.png" />
 		</div>
-	</div>
-
-	<div class="feature_section clearfix">
-		<div class="feature grid_4 alpha">
-			<div class="title">Enemy AI</div>
-			<div class="subtitle">"Exterminate!"</div>
-			<img src="resources/projects/swag/thumb2_evasion.gif" />
-		</div>
-		<div class="detail grid_6 omega">
-				<p>The behaviors for enemy ships and lasers were the most interesting parts of this game to design and implement. As levels are beaten, the difficulty is increased by adding new behaviors to enemies and making their existing actions more precise. This goes a step further than simply making opponents faster, stronger, or tougher. Some enemies will attempt to follow you, while others will more aggressively target your ship. Over time, enemies become progressively better at dodging your lasers as they find a path through your offense. At higher levels, homing lasers curve towards your current position (nevermind the impossible physics involved). The Death Star at the top of the screen will intermittently fire a powerful wide beam towards the player.</p>
-				<p>While some of these techniques are potentially lethal, others are more psychological warfare than actual threats, such as bombarding players with weak homing lasers to intimidate them to dodge into more powerful lasers nearby. Behaviors like this increase the difficulty by making the player nervous rather than increasing the actual danger, lending to a fair and engaging difficulty curve rather than mere frustration.</p>
+		<div class="next">
+			<img class="normal hires" src="resources/arrows/next.png" />
+			<img class="hover hires" src="resources/arrows/next_hover.png" />
 		</div>
 	</div>
 </div>
+
+<p class="intro_text">
+	Star Wars Galaga was created in my senior year at CSUB as a group project for the Software Engineering course. The coding phase of this project lasted just under one month and consisted of over 100 commits between three developers. My responsibilities for this project included collision detection, input handling, graphic rendering, and enemy AI. In addition to using Git/GitHub in a group setting and exploring new software libraries such as GLFW and GLib, we also gained experience with remote collaboration. Although our diverse locations included on-campus, in nearby cities, and even the other side of the country, by dividing tasks between us and heavily utilizing email and GitHub to stay connected, we ended up creating a great product.
+</p>
+
+<div class="feature_section clearfix">
+	<div class="feature grid_4 alpha">
+		<div class="title">GLFW &amp; GLib</div>
+		<div class="subtitle">The best things in life are free</div>
+		<img src="resources/projects/swag/thumb1_osi.png" />
+	</div>
+	<div class="detail grid_6 omega">
+		<p>Much of the heavy lifting in our game was offloaded to GLFW and GLib, a pair of excellent open-source libraries.</p>
+
+		<p>GLFW is used to manage the main event loop and handle input within the application. Using this library enabled an asyncronous callback-oriented approach to event handling, rather than writing an event loop from scratch where all input is handled every frame. This approach allows for cleaner code more typical of object-oriented event-driven programs, despite it being written in pure C.</p>
+
+		<p>Gnome's GLib project is used primarily for its robust and generic data type implementations. This was my first project using GLib, as I had previously coded basic data structures from scratch. I noticed the need for linked lists of several types of structs as I was coding: lasers, ships, turrets, and the like. However, I had been embedding next pointers within each type of struct, so I couldn't just use the same functions for adding, deleting, iterating, etc. on the lists. As I started considering coding a more generic linked list which could handle this, I realized that my <a href="http://en.wikipedia.org/wiki/Not_invented_here" target="_blank">NIH Syndrome</a> was showing and decided on GLib's implementation, since I'd heard good things about the library. Not only does this provide stable and flexible data types, but GLib also provides convenience functions such as <a href="https://developer.gnome.org/glib/2.34/glib-Doubly-Linked-Lists.html#g-list-foreach" target="_blank">g_list_foreach()</a> to easily operate on the entire list.</p>
+	</div>
+</div>
+
+<div class="feature_section clearfix">
+	<div class="feature grid_4 alpha">
+		<div class="title">Enemy AI</div>
+		<div class="subtitle">"Exterminate!"</div>
+		<img src="resources/projects/swag/thumb2_evasion.gif" />
+	</div>
+	<div class="detail grid_6 omega">
+			<p>The behaviors for enemy ships and lasers were the most interesting parts of this game to design and implement. As levels are beaten, the difficulty is increased by adding new behaviors to enemies and making their existing actions more precise. This goes a step further than simply making opponents faster, stronger, or tougher. Some enemies will attempt to follow you, while others will more aggressively target your ship. Over time, enemies become progressively better at dodging your lasers as they find a path through your offense. At higher levels, homing lasers curve towards your current position (nevermind the impossible physics involved). The Death Star at the top of the screen will intermittently fire a powerful wide beam towards the player.</p>
+			<p>While some of these techniques are potentially lethal, others are more psychological warfare than actual threats, such as bombarding players with weak homing lasers to intimidate them to dodge into more powerful lasers nearby. Behaviors like this increase the difficulty by making the player nervous rather than increasing the actual danger, lending to a fair and engaging difficulty curve rather than mere frustration.</p>
+	</div>
+</div>
+
