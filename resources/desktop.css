@@ -89,7 +89,7 @@ code,pre,tt{-o-tab-size:4;-ms-tab-size:4;-webkit-tab-size:4;tab-size:4}
 .swipe-wrap{overflow:hidden;position:relative}
 .swipe-wrap>div{float:left;width:100%;position:relative}
 @media (scan:3d glasses){*{text-shadow:2px 2px 1px #f00,-2px -1px 1px #00f !important;color:rgba(1,1,1,0) !important;font-weight:500 !important}}hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}
-h1{font-size:1.3em;font-weight:bold;margin-bottom:.2em}
+h1{font-size:1.3em;font-weight:bold}
 h2{font-size:1.2em;font-weight:bold}
 h3{font-size:1.2em;font-weight:normal}
 h4{font-size:1.1em;font-weight:normal}
@@ -230,5 +230,6 @@ body.about #content .cta{margin-top:2em}
 #content article{margin-bottom:2em;line-height:1.5em}#content article .content{margin:1em 0}#content article .content p,#content article .content ul,#content article .content pre{margin-bottom:1em}
 #content article .content a{color:#08c;text-decoration:none}#content article .content a:hover{color:#08c;text-decoration:underline}
 #content article .content a:visited{color:#90c}
+#content article h1{margin-bottom:.2em;color:#666;font-weight:600}
 .swipe{width:580px}
 @media (max-width:720px){.sidebar{position:absolute;margin-top:20px;margin-left:10px} #content{margin-top:10px} #header_space{display:none}}
